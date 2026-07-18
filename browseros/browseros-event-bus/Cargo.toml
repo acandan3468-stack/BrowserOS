@@ -1,0 +1,9 @@
+[package]
+name = "browseros-event-bus"
+version = "0.1.0"
+edition = "2021"
+description = "In-process event bus with publish/subscribe for BrowserOS"
+
+[dependencies]
+browseros-types = { path = "../browseros-types" }
+chrono = { version = "0.4", features = ["serde"] }

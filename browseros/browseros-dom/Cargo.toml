@@ -1,0 +1,16 @@
+[package]
+name = "browseros-dom"
+version = "0.1.0"
+edition = "2021"
+description = "High-level DOM abstraction layer. Provides ElementHandle, NodeHandle, FrameHandle, snapshots, locators, mutation, traversal, and style APIs over the browseros-bridge trait contract."
+
+[features]
+default = []
+snapshot-diff = []
+snapshot-css-matching = []
+
+[dependencies]
+browseros-types = { path = "../browseros-types" }
+browseros-bridge = { path = "../browseros-bridge" }
+chrono = { version = "0.4", features = ["serde"] }
+thiserror = "2"

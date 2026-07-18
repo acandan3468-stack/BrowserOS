@@ -1,0 +1,57 @@
+# Security Rules Plugin
+name: security-rules
+version: 1.0.0
+description: Core security rules for Vibe Coder Kit
+author: vibe-core
+
+rules:
+  - id: SEC-001
+    name: no-secrets-in-code
+    pattern: "(API_KEY|SECRET|PASSWORD|PRIVATE_KEY)\\s*[:=]\\s*['\"]"
+    action: block
+    message: "Kodda secret tespit edildi"
+    severity: critical
+    category: security
+
+  - id: SEC-002
+    name: no-eval
+    pattern: "eval\\("
+    action: warn
+    message: "eval() kullanımı tespit edildi"
+    severity: high
+    category: security
+
+  - id: SEC-003
+    name: no-inner-html
+    pattern: "innerHTML\\s*="
+    action: warn
+    message: "innerHTML kullanımı XSS riski taşıyor"
+    severity: high
+    category: security
+
+  - id: SEC-004
+    name: no-http-in-prod
+    pattern: "http://(?!localhost|127\\.0\\.0\\.1)"
+    action: warn
+    message: "Production'da HTTP kullanımı tespit edildi"
+    severity: medium
+    category: security
+
+  - id: SEC-005
+    name: no-console-log
+    pattern: "console\\.log\\("
+    action: info
+    message: "console.log kullanımı tespit edildi"
+    severity: low
+    category: hygiene
+
+hooks:
+  - phase: code
+    action: run_security_scan
+    priority: 1
+    timing: post
+
+  - phase: review
+    action: generate_security_report
+    priority: 2
+    timing: post

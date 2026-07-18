@@ -1,0 +1,22 @@
+[package]
+name = "browseros-cdp"
+version = "0.1.0"
+edition = "2021"
+description = "Chrome DevTools Protocol transport, session management, and bridge trait implementations. The only crate that depends on CDP-specific concepts."
+
+[dependencies]
+browseros-types = { path = "../browseros-types" }
+browseros-bridge = { path = "../browseros-bridge" }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+chrono = { version = "0.4", features = ["serde"] }
+uuid = { version = "1", features = ["v7"] }
+thiserror = "2"
+url = "2"
+base64 = "0.22"
+
+# WebSocket transport for CDP communication
+tungstenite = "0.24"
+
+[dev-dependencies]
+browseros-event-bus = { path = "../browseros-event-bus" }

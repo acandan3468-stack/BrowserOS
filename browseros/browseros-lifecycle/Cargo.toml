@@ -1,0 +1,11 @@
+[package]
+name = "browseros-lifecycle"
+version = "0.1.0"
+edition = "2021"
+description = "Component lifecycle management for BrowserOS"
+
+[dependencies]
+browseros-types = { path = "../browseros-types" }
+browseros-event-bus = { path = "../browseros-event-bus" }
+browseros-observability = { path = "../browseros-observability" }
+chrono = { version = "0.4", features = ["serde"] }

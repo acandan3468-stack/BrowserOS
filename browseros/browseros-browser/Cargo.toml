@@ -1,0 +1,21 @@
+[package]
+name = "browseros-browser"
+version = "0.1.0"
+edition = "2021"
+license = "MIT OR Apache-2.0"
+
+[dependencies]
+browseros-types = { path = "../browseros-types" }
+browseros-bridge = { path = "../browseros-bridge" }
+browseros-event-bus = { path = "../browseros-event-bus" }
+browseros-observability = { path = "../browseros-observability" }
+browseros-config = { path = "../browseros-config" }
+browseros-cdp = { path = "../browseros-cdp" }
+serde = { version = "1" }
+serde_json = { version = "1" }
+chrono = { version = "0.4" }
+uuid = { version = "1", features = ["v4"] }
+thiserror = { version = "2" }
+
+[dev-dependencies]
+browseros-storage = { path = "../browseros-storage" }

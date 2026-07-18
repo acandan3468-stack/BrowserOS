@@ -1,0 +1,21 @@
+[workspace]
+resolver = "2"
+members = [
+    "browseros-types",
+    "browseros-config",
+    "browseros-observability",
+    "browseros-event-bus",
+    "browseros-lifecycle",
+    "browseros-scheduler",
+    "browseros-runtime",
+    "browseros-stress-tests",
+    "browseros-bridge",
+    "browseros-browser",
+    "browseros-page",
+    "browseros-cdp",
+    "browseros-dom",
+    "browseros-storage",
+    "browseros-dag",
+    "browseros-llm",
+    "browseros-mcp",
+]

@@ -1,0 +1,17 @@
+[package]
+name = "browseros-stress-tests"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[dependencies]
+browseros-types = { path = "../browseros-types" }
+browseros-config = { path = "../browseros-config" }
+browseros-observability = { path = "../browseros-observability" }
+browseros-event-bus = { path = "../browseros-event-bus" }
+browseros-lifecycle = { path = "../browseros-lifecycle" }
+browseros-scheduler = { path = "../browseros-scheduler" }
+browseros-runtime = { path = "../browseros-runtime" }
+chrono = { version = "0.4", features = ["serde"] }
+tempfile = "3"
+sysinfo = "0.33"

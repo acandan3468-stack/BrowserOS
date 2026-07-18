@@ -1,0 +1,19 @@
+[package]
+name = "browseros-dag"
+version = "0.1.0"
+edition = "2021"
+description = "DAG execution engine for BrowserOS — multi-step task orchestration with dependency ordering, parallel execution, retry, and cancellation"
+
+[dependencies]
+browseros-types = { path = "../browseros-types" }
+browseros-event-bus = { path = "../browseros-event-bus" }
+browseros-observability = { path = "../browseros-observability" }
+browseros-scheduler = { path = "../browseros-scheduler" }
+chrono = { version = "0.4", features = ["serde"] }
+serde = { version = "1", features = ["derive"] }
+thiserror = "2"
+toml = "0.8"
+
+[dev-dependencies]
+serde_json = "1"
+tempfile = "3"

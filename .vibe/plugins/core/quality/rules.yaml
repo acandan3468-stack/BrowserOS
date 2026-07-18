@@ -1,0 +1,49 @@
+# Quality Rules Plugin
+name: quality-rules
+version: 1.0.0
+description: Core quality rules for Vibe Coder Kit
+author: vibe-core
+
+rules:
+  - id: QLT-001
+    name: require-tests
+    pattern: ""
+    action: warn
+    message: "Her görev için test yazılması gerekiyor"
+    severity: high
+    category: quality
+
+  - id: QLT-002
+    name: no-any-type
+    pattern: ":\\s*any\\b"
+    action: warn
+    message: "any tipi kullanımı kaçınılmalı"
+    severity: medium
+    category: quality
+
+  - id: QLT-003
+    name: require-error-handling
+    pattern: "catch\\s*\\([^)]*\\)\\s*\\{\\s*\\}"
+    action: warn
+    message: "Boş catch bloğu tespit edildi"
+    severity: high
+    category: quality
+
+  - id: QLT-004
+    name: no-hardcoded-urls
+    pattern: "https?://[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}"
+    action: info
+    message: "Hardcoded URL kullanımı tespit edildi"
+    severity: low
+    category: quality
+
+hooks:
+  - phase: code
+    action: run_quality_check
+    priority: 2
+    timing: post
+
+  - phase: review
+    action: generate_quality_report
+    priority: 1
+    timing: post

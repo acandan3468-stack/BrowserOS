@@ -1,0 +1,111 @@
+{
+  "phases": {
+    "init": {
+      "id": "init",
+      "name": "Project Initialization",
+      "depends": [],
+      "next": ["clarify"],
+      "entryCriteria": [],
+      "exitCriteria": ["config created", "state initialized"],
+      "optional": false
+    },
+    "clarify": {
+      "id": "clarify",
+      "name": "Requirements Clarification",
+      "depends": ["init"],
+      "next": ["brainstorm", "plan"],
+      "entryCriteria": ["task defined"],
+      "exitCriteria": ["no open questions", "scope defined"],
+      "optional": false
+    },
+    "brainstorm": {
+      "id": "brainstorm",
+      "name": "Research & Alternatives",
+      "depends": ["clarify"],
+      "next": ["plan"],
+      "entryCriteria": ["ambiguity exists"],
+      "exitCriteria": ["alternatives evaluated"],
+      "optional": true,
+      "parallelGroup": "planning"
+    },
+    "plan": {
+      "id": "plan",
+      "name": "Planning",
+      "depends": ["clarify"],
+      "next": ["approve"],
+      "entryCriteria": ["scope clear"],
+      "exitCriteria": ["task list created"],
+      "optional": false,
+      "parallelGroup": "planning"
+    },
+    "approve": {
+      "id": "approve",
+      "name": "Architecture Review",
+      "depends": ["plan"],
+      "next": ["code"],
+      "entryCriteria": ["plan ready"],
+      "exitCriteria": ["approved"],
+      "optional": false
+    },
+    "code": {
+      "id": "code",
+      "name": "Implementation",
+      "depends": ["approve"],
+      "next": ["review"],
+      "entryCriteria": ["approval received"],
+      "exitCriteria": ["all tasks done", "tests passing"],
+      "optional": false,
+      "parallelGroup": "development"
+    },
+    "review": {
+      "id": "review",
+      "name": "Code Review",
+      "depends": ["code"],
+      "next": ["learn", "deploy"],
+      "entryCriteria": ["code complete"],
+      "exitCriteria": ["review approved"],
+      "optional": false
+    },
+    "fix": {
+      "id": "fix",
+      "name": "Bug Fixes",
+      "depends": ["review"],
+      "next": ["code"],
+      "entryCriteria": ["bugs found"],
+      "exitCriteria": ["bugs fixed"],
+      "optional": true,
+      "parallelGroup": "development"
+    },
+    "learn": {
+      "id": "learn",
+      "name": "Knowledge Capture",
+      "depends": ["review"],
+      "next": ["done"],
+      "entryCriteria": ["review complete"],
+      "exitCriteria": ["knowledge recorded"],
+      "optional": false
+    },
+    "deploy": {
+      "id": "deploy",
+      "name": "Deployment",
+      "depends": ["review"],
+      "next": ["learn"],
+      "entryCriteria": ["review approved"],
+      "exitCriteria": ["deploy successful"],
+      "optional": true
+    },
+    "done": {
+      "id": "done",
+      "name": "Workflow Complete",
+      "depends": ["learn"],
+      "next": [],
+      "entryCriteria": ["knowledge captured"],
+      "exitCriteria": ["state reset"],
+      "optional": false
+    }
+  },
+  "parallelGroups": [
+    ["brainstorm", "plan"],
+    ["code", "fix"]
+  ]
+}

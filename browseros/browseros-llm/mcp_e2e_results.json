@@ -1,0 +1,165 @@
+[
+  {
+    "label": "S1a: initialize",
+    "ok": true,
+    "duration": 3
+  },
+  {
+    "label": "S1b: tools/list (chat, embed, health)",
+    "ok": true,
+    "duration": 0
+  },
+  {
+    "label": "S1c: notification silent",
+    "ok": true
+  },
+  {
+    "label": "S2a: health (no providers configured)",
+    "ok": true,
+    "duration": 1
+  },
+  {
+    "label": "S2b: health #1",
+    "ok": true,
+    "duration": 0
+  },
+  {
+    "label": "S2b: health #2",
+    "ok": true,
+    "duration": 0
+  },
+  {
+    "label": "S2b: health #3",
+    "ok": true,
+    "duration": 0
+  },
+  {
+    "label": "S3a: chat (error: configuration error: endpoint not found (HTTP 404))",
+    "ok": true,
+    "duration": 343
+  },
+  {
+    "label": "S3b: chat (with model)",
+    "ok": true,
+    "duration": 195
+  },
+  {
+    "label": "S3c: chat (system prompt)",
+    "ok": true,
+    "duration": 192
+  },
+  {
+    "label": "S3d: chat (multi-turn)",
+    "ok": true,
+    "duration": 193
+  },
+  {
+    "label": "S3e: chat (capability hint)",
+    "ok": true,
+    "duration": 190
+  },
+  {
+    "label": "S3f: chat (empty msgs)",
+    "ok": true,
+    "duration": 0
+  },
+  {
+    "label": "S4a: embed (basic)",
+    "ok": true,
+    "duration": 154
+  },
+  {
+    "label": "S4b: embed (with model)",
+    "ok": true,
+    "duration": 149
+  },
+  {
+    "label": "S4c: embed (empty input)",
+    "ok": true,
+    "duration": 1
+  },
+  {
+    "label": "S5a: parse error",
+    "ok": true
+  },
+  {
+    "label": "S5b: unknown method",
+    "ok": true
+  },
+  {
+    "label": "S5c: unknown tool",
+    "ok": true
+  },
+  {
+    "label": "S5d: missing required",
+    "ok": true
+  },
+  {
+    "label": "S5e: nonexistent model",
+    "ok": true
+  },
+  {
+    "label": "S6: health #1",
+    "ok": true,
+    "duration": 0
+  },
+  {
+    "label": "S6: health #2",
+    "ok": true,
+    "duration": 0
+  },
+  {
+    "label": "S6: health #3",
+    "ok": true,
+    "duration": 0
+  },
+  {
+    "label": "S6: health #4",
+    "ok": true,
+    "duration": 0
+  },
+  {
+    "label": "S6: health #5",
+    "ok": true,
+    "duration": 0
+  },
+  {
+    "label": "S6: health #6",
+    "ok": true,
+    "duration": 0
+  },
+  {
+    "label": "S6: health #7",
+    "ok": true,
+    "duration": 0
+  },
+  {
+    "label": "S6: health #8",
+    "ok": true,
+    "duration": 0
+  },
+  {
+    "label": "S6: health #9",
+    "ok": true,
+    "duration": 0
+  },
+  {
+    "label": "S6: health #10",
+    "ok": true,
+    "duration": 0
+  },
+  {
+    "label": "S7: shutdown (exit=0)",
+    "ok": true
+  },
+  {
+    "label": "S8a: reconnect init",
+    "ok": true,
+    "duration": 0
+  },
+  {
+    "label": "S8b: reconnect health",
+    "ok": true,
+    "duration": 0
+  }
+]

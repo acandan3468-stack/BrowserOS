@@ -1,0 +1,15 @@
+[package]
+name = "browseros-config"
+version = "0.1.0"
+edition = "2021"
+description = "Layered configuration system for BrowserOS — source loading, precedence merging, startup validation, component-owned config blocks"
+
+[dependencies]
+browseros-types = { path = "../browseros-types" }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+serde_yaml = "0.9"
+thiserror = "2"
+
+[dev-dependencies]
+tempfile = "3"

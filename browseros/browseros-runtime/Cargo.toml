@@ -1,0 +1,18 @@
+[package]
+name = "browseros-runtime"
+version = "0.1.0"
+edition = "2021"
+description = "RuntimeContext — dependency injection replacement for BrowserOS"
+
+[dependencies]
+browseros-types = { path = "../browseros-types" }
+browseros-config = { path = "../browseros-config" }
+browseros-observability = { path = "../browseros-observability" }
+browseros-event-bus = { path = "../browseros-event-bus" }
+browseros-lifecycle = { path = "../browseros-lifecycle" }
+browseros-scheduler = { path = "../browseros-scheduler" }
+browseros-dag = { path = "../browseros-dag" }
+chrono = { version = "0.4", features = ["serde"] }
+
+[dev-dependencies]
+tempfile = "3"

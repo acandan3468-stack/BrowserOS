@@ -1,0 +1,25 @@
+{
+  "version": "1.0.0",
+  "projectType": "web",
+  "teamSize": "solo",
+  "painPoint": "consistency",
+  "experienceLevel": "beginner",
+  "activePhases": ["init", "clarify", "code", "review", "learn"],
+  "activeRules": 12,
+  "subagentsRequired": false,
+  "selfReflectionRequired": false,
+  "telemetry": {
+    "enabled": true,
+    "exportInterval": 300000
+  },
+  "healthChecks": {
+    "enabled": true,
+    "interval": 30000,
+    "timeout": 5000
+  },
+  "costTracking": {
+    "enabled": true,
+    "budgetPerSession": 100000,
+    "alertThreshold": 80
+  }
+}
